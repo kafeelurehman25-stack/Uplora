@@ -1,0 +1,6 @@
+{
+  "name": "Uplora",
+  "description": "Minimalist premium landing page for Uplora digital services and courses with sleek scroll animations and secure Whop redirection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

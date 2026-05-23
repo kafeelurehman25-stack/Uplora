@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-gold-50: #fffdf5;
+  --color-gold-100: #fff9db;
+  --color-gold-200: #fee89d;
+  --color-gold-300: #fdd25f;
+  --color-gold-400: #fbb22c;
+  --color-gold-500: #e69110;
+  --color-gold-650: #b86a05;
+  --color-gold-800: #824702;
+  --color-gold-950: #4a2400;
+
+  --color-obsidian-950: #050505;
+  --color-obsidian-900: #0a0a0a;
+  --color-obsidian-800: #121212;
+  --color-obsidian-700: #1a1a1a;
+  
+  --animate-gold-pulse: white-pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 8s linear infinite;
+}
+
+@keyframes white-pulse {
+  0%, 100% {
+    opacity: 0.03;
+    transform: scale(1) translate(-50%, -50%);
+    filter: blur(120px);
+  }
+  50% {
+    opacity: 0.12;
+    transform: scale(1.1) translate(-50%, -50%);
+    filter: blur(150px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* Custom premium smooth transition presets */
+.satin-text {
+  background: linear-gradient(135deg, #ffffff 40%, #a1a1a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-shime {
+  background: linear-gradient(120deg, #ffffff 0%, #a1a1a1 40%, #ffffff 80%, #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 12s linear infinite;
+}
+
+/* Luxury card shadow style */
+.gold-glow-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-border:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.02), inset 0 1px 2px rgba(255, 255, 255, 0.07);
+}
